@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: openldap
+  name: openldap-data
+spec:
+  accessModes: [ "ReadWriteMany" ]
+  storageClassName: "managed-nfs-storage-nas-39dd24bd30-baseserver"
+  resources:
+    requests:
+      storage: 50Gi
